@@ -40,7 +40,6 @@ img {
 }
 
 .container {
-  max-width: 1340px;
   margin: 0 auto;
   padding: 0;
 }
@@ -127,18 +126,15 @@ img {
  index
 ---------------------------------*/
 
+.works-img{
+  width: 40%;
+  display: flex;
+}
+
 .works-item:nth-of-type(3n) {
   margin-right: 0;
 }
 
-.works-img img {
-  transition-duration: 0.5s;
-}
-.works-img img:hover {
-  opacity: 1s;
-  transform: scale(1.2,1.2);
-  transition-duration: 0.35s;
-}
 
 /*--------------------------------
  About
