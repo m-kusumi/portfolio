@@ -36,7 +36,7 @@ img {
 }
 
 .section:nth-of-type(odd) {
-  background-color: #ffffff;
+  background-color: gray;
 }
 
 .container {
