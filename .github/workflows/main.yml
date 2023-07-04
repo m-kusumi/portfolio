@@ -1,16 +1,16 @@
-on:
-  push:
-    branches:
-      - main
+on: #トリガーの設定
+  push: #プッシュ時に実行
+    branches: [main] #ブランチの指定
 name: Build and Deploy
+
 jobs:
   FTP-Deploy-Action:
-    name: FTP-Deploy-Action     
-    runs-on: ubuntu-latest
+    name: FTP-Deploy-Action #ジョブの名前
+    runs-on: ubuntu-latest #仮想環境の指定
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2  #チェックアウトアクション（https://github.com/actions/checkout）
       - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0 #FTPアップロードアクション（https://github.com/SamKirkland/FTP-Deploy-Action）
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
