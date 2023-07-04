@@ -158,8 +158,14 @@ img {
 .works-ttl {
   font-size: 8em;
 }
-.works-ttl a {
+
+a.works-ttl {
   text-decoration: underline;
+}
+
+a.works-ttl:hover {
+  background: #161616;
+  color: #7fc6c8;
 }
 
 ul {
