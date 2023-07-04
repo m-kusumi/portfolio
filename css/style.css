@@ -158,6 +158,9 @@ img {
 .works-ttl {
   font-size: 8em;
 }
+.works-ttl a {
+  text-decoration: underline;
+}
 
 ul {
   list-style: none;
