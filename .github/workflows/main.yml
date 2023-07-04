@@ -12,8 +12,8 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@4.3.0 #FTPアップロードアクション（https://github.com/SamKirkland/FTP-Deploy-Action）
         env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          LOCAL_DIR: ./
-          SERVER-DIR: ${{ secrets.FTP_SERVER_DIR }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
