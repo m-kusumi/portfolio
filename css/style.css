@@ -185,15 +185,24 @@ li {
   color: #797979;
 }
 
-.arrow-right {
+.arrow-left ,.arrow-right {
   display: inline-block;
   width: 40px;
   height: 40px;
   margin: 0 10px;
   border-top: 1px solid #000;
   border-right: 1px solid #000;
+}
+
+.arrow-left {
+  transform: rotate(135deg);
+}
+
+.arrow-right {
   transform: rotate(45deg);
 }
+
+
 
 /*--------------------------------
  下層：Worksページ
