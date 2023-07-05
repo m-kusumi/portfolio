@@ -35,10 +35,6 @@ img {
   padding-top: 73px;
 }
 
-.section:nth-of-type(odd) {
-  background-color: #f7f8f7;
-}
-
 .container {
   margin: 0 auto;
   padding: 0;
@@ -70,7 +66,6 @@ img {
   top: 0;
   z-index: 1;
   width: 100%;
-  background-color: #f7f8f7;
 }
 
 .header .container {
