@@ -69,16 +69,18 @@ img {
 }
 
 .header .container {
-  background: #d6d6d6;
+  background: #000000;
+  padding: 20px 40px;
+  color: #7fc6c8;
   display: flex;
   align-items: center;
-  padding: 20px 40px;
   position: fixed;
   bottom: 0;
 }
 
 .header-logo {
   color: rgb(255, 255, 255);
+  background: transparent;
   line-height: 1.2;
   margin-right: 20px;
   letter-spacing: .1em;
