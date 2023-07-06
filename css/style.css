@@ -176,7 +176,7 @@ li {
 ---------------------------------*/
 .footer {
   padding: 30px;
-  background-color: #fff;
+  background: #fff;
 }
 
 .copyright {
@@ -186,13 +186,15 @@ li {
 }
 
 .arrow {
+  background: transparent;
   position: fixed;
-  bottom: 20%;
-  right: 10%;
+  bottom: 5%;
+  right: 5%;
 }
 
 .arrow-left ,.arrow-right {
   display: inline-block;
+  background: transparent;
   width: 40px;
   height: 40px;
   margin: 0 10px;
