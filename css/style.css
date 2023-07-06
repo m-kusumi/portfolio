@@ -185,6 +185,12 @@ li {
   color: #797979;
 }
 
+.arrow {
+  position: fixed;
+  bottom: 20%;
+  right: 10%;
+}
+
 .arrow-left ,.arrow-right {
   display: inline-block;
   width: 40px;
