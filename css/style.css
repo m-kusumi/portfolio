@@ -32,7 +32,7 @@ img {
  レイアウト
 ---------------------------------*/
 .wrapper {
-  padding-top: 73px;
+  padding-top: 10px;
 }
 
 .container {
@@ -304,11 +304,6 @@ li {
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 20px;
-  }
-
-  /* レイアウト */
-  .wrapper {
-    padding-top: 57px;
   }
 
   /* ヘッダー */
