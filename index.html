@@ -28,9 +28,9 @@
     <nav class="gnav">
       <ul class="gnav-list">
         <!-- <li class="gnav-item"><a href="index.html">トップ</a></li> -->
-        <id="link1" li class="gnav-item"><a href="work/works.html">WORK</a></id=>
-        <id="link2" li class="gnav-item"><a href="about.html">NIKKI</a></id=>
-        <id="link3" li class="gnav-item"><a href="play.html">PLAY</a></id=>
+        <li id="random1" class="gnav-item"><a href="work/works.html">WORK</a></li>
+        <li id="random2" class="gnav-item"><a href="about.html">NIKKI</a></li>
+        <li id="random3" class="gnav-item"><a href="play.html">PLAY</a></li>
       </ul>
     </nav>
     <!-- /header -->
@@ -83,20 +83,20 @@
         shapes.push(shape);
     }
 
-    document.getElementById('link1').addEventListener('mouseover', createRandomShapes);
-    document.getElementById('link1').addEventListener('mouseout', function() {
+    document.getElementById('random1').addEventListener('mouseover', createRandomShapes);
+    document.getElementById('random1').addEventListener('mouseout', function() {
         shapes.forEach(shape => shape.remove());
         shapes = [];
     });
 
-    document.getElementById('link2').addEventListener('mouseover', createRandomShapes);
-    document.getElementById('link2').addEventListener('mouseout', function() {
+    document.getElementById('random2').addEventListener('mouseover', createRandomShapes);
+    document.getElementById('random2').addEventListener('mouseout', function() {
         shapes.forEach(shape => shape.remove());
         shapes = [];
     });
 
-    document.getElementById('link3').addEventListener('mouseover', createRandomShapes);
-    document.getElementById('link3').addEventListener('mouseout', function() {
+    document.getElementById('random3').addEventListener('mouseover', createRandomShapes);
+    document.getElementById('random3').addEventListener('mouseout', function() {
         shapes.forEach(shape => shape.remove());
         shapes = [];
     });
