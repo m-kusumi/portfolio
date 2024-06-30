@@ -31,7 +31,6 @@ html {
 }
 
 * {
-  background: #f7f8f7;
   margin: 0;
   padding: 0; /* Reset `padding` and `margin` of all elements */
 }

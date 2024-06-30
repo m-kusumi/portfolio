@@ -1,68 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta property='og:type' content='website'>
-  <meta property='og:title' content='クスミマヨ ポートフォリオ'>
-  <meta property='og:url' content='URLが入る'>
-  <meta property='og:description' content='クスミマヨのポートフォリオサイトです。'>
-  <meta property="og:image" content="img/ogp.png">
-  <meta name="description" content="クスミマヨのポートフォリオサイトです" />
-  <title>クスミマヨ ポートフォリオ</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
   <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <link rel=”canonical” href=”URLが入る” />
+  <style>
+    .shape {
+        position: absolute;
+        border: 1px solid black;
+    }
+  </style>
 </head>
-
 <body>
-  <div class="wrapper">
+  <a href="#" id="link1">マウスを乗せてください</a>
+  <a href="#" id="link2">マウスを乗せてください</a>
+  <a href="#" id="link3">マウスを乗せてください</a>
+  <script>
+    let shapes = [];
 
-    <!-- header -->
-    <header class="header ">
-      <div class="container">
-        <h1 class="header-logo">
-          <a href=".">クスミマヨ</a>
-        </h1>
-        <nav class="gnav">
-          <ul class="gnav-list">
-            <li class="gnav-item"><a href="/index.html">トップ</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- /header -->
+    function createRandomShapes() {
+        const numberOfShapes = Math.floor(Math.random() * 25) + 1; // 1から30までのランダムな数の図形を生成
 
-    <main class="content">
-      <!-- about -->
-      <section class="about section" id="about">
-        <div class="container">
-          <div class="profile">
-            <div class="profile-body">
-              <p>
-                test
-                1995年和歌山県生まれ。2018年に長岡造形大学視覚デザイン学科卒業。
-              </p>
-              <p>
-                同年にWeb制作会社に入社してからWeb・グラフィック・映像など幅広く制作しました。
-              </p>
-              <p>
-                これからは、少しの仕掛けで直観的に触りたくなる、伝えるのではなく、無意識的に感じてもらうために、
-                技術に頼りすぎず、アイデアのために技術を活かすWebデザインを作ることを大事に、エンジニアとしても成長したいと考えております。
-                
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /about -->
-    </main>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script type='text/javascript' src="js/script.js"></script>
+        for (let i = 0; i < numberOfShapes; i++) {
+            createRandomShape();
+        }
+    }
+
+    function createRandomShape() {
+        const shapeType = Math.random();
+        let shape = document.createElement('div');
+
+        if (shapeType < 0.4) {
+            // 円形
+            const size = Math.floor(Math.random() * 200) + 20;
+            shape.className = 'shape';
+            shape.style.width = `${size}px`;
+            shape.style.height = `${size}px`;
+            shape.style.borderRadius = '50%';
+        } else if (shapeType < 0.6) {
+            // 変な図形（ランダムなスタイル）
+            shape.className = 'shape';
+            shape.style.width = `${Math.random() * 150 + 20}px`;
+            shape.style.height = `${Math.random() * 50 + 20}px`;
+            shape.style.transform = `rotate(${Math.random() * 180}deg)`;
+            shape.style.borderRadius = `${Math.random() * 50}% ${Math.random() * 50}% ${Math.random() * 50}% ${Math.random() * 10}%`;
+        } else {
+            // 変な図形（ランダムなスタイル）
+            shape.className = 'shape';
+            shape.style.width = `${Math.random() * 200 + 20}px`;
+            shape.style.height = `${Math.random() * 400 + 20}px`;
+            shape.style.transform = `rotate(${Math.random() * 360}deg)`;
+            shape.style.borderRadius = `${Math.random() * 20}% ${Math.random() * 90}% ${Math.random() * 30}% ${Math.random() * 50}%`;
+        }
+
+        shape.style.top = `${Math.random() * window.innerHeight}px`;
+        shape.style.left = `${Math.random() * window.innerWidth}px`;
+        document.body.appendChild(shape);
+        shapes.push(shape);
+    }
+
+    document.getElementById('link1').addEventListener('mouseover', createRandomShapes);
+    document.getElementById('link1').addEventListener('mouseout', function() {
+        shapes.forEach(shape => shape.remove());
+        shapes = [];
+    });
+
+    document.getElementById('link2').addEventListener('mouseover', createRandomShapes);
+    document.getElementById('link2').addEventListener('mouseout', function() {
+        shapes.forEach(shape => shape.remove());
+        shapes = [];
+    });
+
+    document.getElementById('link3').addEventListener('mouseover', createRandomShapes);
+    document.getElementById('link3').addEventListener('mouseout', function() {
+        shapes.forEach(shape => shape.remove());
+        shapes = [];
+    });
+  </script>
 </body>
 </html>
