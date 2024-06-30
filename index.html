@@ -28,9 +28,9 @@
     <nav class="gnav">
       <ul class="gnav-list">
         <!-- <li class="gnav-item"><a href="index.html">トップ</a></li> -->
-        <li class="gnav-item"><a href="work/works.html">WORK</a></li>
-        <li class="gnav-item"><a href="about.html">NIKKI</a></li>
-        <li class="gnav-item"><a href="play.html">PLAY</a></li>
+        <id="link1" li class="gnav-item"><a href="work/works.html">WORK</a></id=>
+        <id="link2" li class="gnav-item"><a href="about.html">NIKKI</a></id=>
+        <id="link3" li class="gnav-item"><a href="play.html">PLAY</a></id=>
       </ul>
     </nav>
     <!-- /header -->
@@ -39,5 +39,68 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type='text/javascript' src="js/script.js"></script>
+  <script>
+    let shapes = [];
+
+    function createRandomShapes() {
+        const numberOfShapes = Math.floor(Math.random() * 25) + 1; // 1から30までのランダムな数の図形を生成
+
+        for (let i = 0; i < numberOfShapes; i++) {
+            createRandomShape();
+        }
+    }
+
+    function createRandomShape() {
+        const shapeType = Math.random();
+        let shape = document.createElement('div');
+
+        if (shapeType < 0.4) {
+            // 円形
+            const size = Math.floor(Math.random() * 200) + 20;
+            shape.className = 'shape';
+            shape.style.width = `${size}px`;
+            shape.style.height = `${size}px`;
+            shape.style.borderRadius = '50%';
+        } else if (shapeType < 0.6) {
+            // 変な図形（ランダムなスタイル）
+            shape.className = 'shape';
+            shape.style.width = `${Math.random() * 150 + 20}px`;
+            shape.style.height = `${Math.random() * 50 + 20}px`;
+            shape.style.transform = `rotate(${Math.random() * 180}deg)`;
+            shape.style.borderRadius = `${Math.random() * 50}% ${Math.random() * 50}% ${Math.random() * 50}% ${Math.random() * 10}%`;
+        } else {
+            // 変な図形（ランダムなスタイル）
+            shape.className = 'shape';
+            shape.style.width = `${Math.random() * 200 + 20}px`;
+            shape.style.height = `${Math.random() * 400 + 20}px`;
+            shape.style.transform = `rotate(${Math.random() * 360}deg)`;
+            shape.style.borderRadius = `${Math.random() * 20}% ${Math.random() * 90}% ${Math.random() * 30}% ${Math.random() * 50}%`;
+        }
+
+        shape.style.top = `${Math.random() * window.innerHeight}px`;
+        shape.style.left = `${Math.random() * window.innerWidth}px`;
+        document.body.appendChild(shape);
+        shapes.push(shape);
+    }
+
+    document.getElementById('link1').addEventListener('mouseover', createRandomShapes);
+    document.getElementById('link1').addEventListener('mouseout', function() {
+        shapes.forEach(shape => shape.remove());
+        shapes = [];
+    });
+
+    document.getElementById('link2').addEventListener('mouseover', createRandomShapes);
+    document.getElementById('link2').addEventListener('mouseout', function() {
+        shapes.forEach(shape => shape.remove());
+        shapes = [];
+    });
+
+    document.getElementById('link3').addEventListener('mouseover', createRandomShapes);
+    document.getElementById('link3').addEventListener('mouseout', function() {
+        shapes.forEach(shape => shape.remove());
+        shapes = [];
+    });
+  </script>
+  
 </body>
 </html>
