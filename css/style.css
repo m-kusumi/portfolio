@@ -61,21 +61,19 @@ img {
   font-size: 1.8em;
   font-weight: 100;
   position: fixed;
-  right:1%;
-  top: 0;
+  top: 1%;
+  right: 2%;
 }
 
-.gnav {
-  position: fixed;
-  left: 2%;
-  top: 35%;
-}
 
 
 .gnav-list {
   display: flex;
   flex-direction: column;
   list-style: none;
+  position: absolute;
+  top: 33%;
+  left:2%;
 }
 
 .gnav-item a {
