@@ -16,27 +16,47 @@
   <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="img/favicon.ico" />
   <link rel=”canonical” href=”URLが入る” />
+
   <style>
     .shape {
         position: absolute;
         border: 1px solid black;
+    }
+    video {
+        height: 100vh;
+        object-fit: cover;
+        opacity: 1;
+        transition: opacity 3s ease-in-out;
+
+    }
+    #overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        opacity: 0;
     }
   </style>
 </head>
 
 <body>
   <div class="wrapper">
-
+    <video id="fullscreen-video" autoplay muted loop>
+      <source src="/assets/IMG_0706.mp4" type="video/mp4">
+      <!-- Add other video sources as needed -->
+  </video>
     <!-- header -->
     <header class="header">
           <a href="index.html">MAYO KUSUMI</a>
     </header>
-    <nav class="gnav">
+    <nav id ="overlay" class="gnav">
       <ul class="gnav-list">
         <!-- <li class="gnav-item"><a href="index.html">トップ</a></li> -->
         <div id="random1" li class="gnav-item"><a href="work/works.html">WORK</a></div>
-        <li id="random2" class="gnav-item"><a href="nikki.html">NIKKI</a></li>
-        <li id="random3" class="gnav-item"><a href="play.html">PLAY</a></li>
+        <div id="random2" li class="gnav-item"><a href="nikki.html">NIKKI</a></div>
+        <div id="random3" li class="gnav-item"><a href="play.html">PLAY</a></div>
       </ul>
     </nav>
     <!-- /header -->
@@ -105,6 +125,21 @@
         shapes.forEach(shape => shape.remove());
         shapes = [];
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('fullscreen-video');
+    const overlay = document.getElementById('overlay');
+
+    // When overlay is clicked, fade out video and show new content
+    overlay.addEventListener('click', function() {
+        video.style.opacity = '0';
+        setTimeout(function() {
+            // Replace with your logic to show new content
+            overlay.style.opacity = '1';
+            // Example: window.location.href = 'new-page.html';
+        }, 1500); // Delay in milliseconds before showing new content
+    });
+});
   </script>
   
 </body>
