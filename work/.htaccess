@@ -1,4 +1,4 @@
 AuthType Basic
-AuthName password-page
-AuthUserFile /works.html.htpasswd
-Require user sample
+AuthName "Secret Area"
+AuthUserFile work/.htpassword
+Require user valid-user
