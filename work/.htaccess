@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName password-page
-AuthUserFile /Users/kusunokimimichiyo/Documents/GitHub/portfolio/work/works.html.htpasswd
+AuthUserFile /works.html.htpasswd
 Require user sample
