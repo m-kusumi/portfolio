@@ -73,7 +73,7 @@ img {
   list-style: none;
   position: absolute;
   top: 33%;
-  left:2%;
+  left:8%;
 }
 
 .gnav-item a {
@@ -90,6 +90,19 @@ img {
   width: 100%;
 }
 
+#random1 {
+  transform: rotate( -12deg );
+}
+
+#random2 {
+  transform: rotate( -30deg );
+}
+
+
+#random3 {
+  transform: rotate( -45deg );
+}
+
 
 /*--------------------------------
  index
@@ -98,7 +111,6 @@ img {
 .works-item:nth-of-type(3n) {
   margin-right: 0;
 }
-
 
 /*--------------------------------
  About

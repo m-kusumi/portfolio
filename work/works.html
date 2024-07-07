@@ -17,12 +17,38 @@
   <link href="/css/style.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="img/favicon.ico" />
   <link rel=”canonical” href=”URLが入る” />
+
+  <style>
+    #circle {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+        .image {
+            position: absolute;
+            transform-origin: center;
+        }
+  </style>
 </head>
 
 <body>
 
 </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<div id="circle"></div>
+    <script>
+        const numImages = 8;
+        const circle = document.getElementById('circle');
+        const imgSrc = './img/kiso.png';
+
+        for (let i = 0; i < numImages; i++) {
+            const angle = (360 / numImages) * i;
+            const img = document.createElement('img');
+            img.src = imgSrc;
+            img.className = 'image';
+            img.style.transform = `rotate(${angle}deg) translate(${circle.clientWidth / 2}px) rotate(-${angle}deg)`;
+            circle.appendChild(img);
+        }
+    </script>
   <script type='text/javascript' src="js/script.js"></script>
 </body>
 </html>
