@@ -58,51 +58,39 @@ img {
 ---------------------------------*/
 .header {
   font-family: Futura PT,"Yu Gothic Medium",YuGothic,"Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: 100;
   position: fixed;
-  top: 1%;
+  bottom: 1%;
   right: 2%;
 }
 
-
-
 .gnav-list {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  /* flex-direction: column; */
   list-style: none;
-  position: absolute;
-  top: 33%;
-  left:8%;
+}
+
+.gnav-item {
+  width: 33.3%;
+  height: 100vh;
+  text-align: center;
+  border-right: solid 1px;
 }
 
 .gnav-item a {
-  position: relative;
+
   font-family: Futura PT,"Yu Gothic Medium",YuGothic,"Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
   font-size: 2em;
   font-weight: 100;
   letter-spacing: 0.2em;
   line-height: 1.7em;
-
 }
 
 .gnav-item a:hover:after {
   width: 100%;
 }
-
-#random1 {
-  transform: rotate( -12deg );
-}
-
-#random2 {
-  transform: rotate( -30deg );
-}
-
-
-#random3 {
-  transform: rotate( -45deg );
-}
-
 
 /*--------------------------------
  index

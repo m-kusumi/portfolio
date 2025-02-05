@@ -21,8 +21,8 @@
   <style>
     #circle {
             position: relative;
-            width: 500px;
-            height: 500px;
+            width: 20vh;
+            left:50%;
         }
         .image {
             position: absolute;
@@ -35,17 +35,18 @@
 
 </div>
 <div id="circle"></div>
+
     <script>
         const numImages = 8;
         const circle = document.getElementById('circle');
-        const imgSrc = 'img/kiso.png';
+        const imgSrc = '/img/kiso.png';
 
         for (let i = 0; i < numImages; i++) {
             const angle = (360 / numImages) * i;
             const img = document.createElement('img');
             img.src = imgSrc;
             img.className = 'image';
-            img.style.transform = `rotate(${angle}deg) translate(${circle.clientWidth / 2}px) rotate(-${angle}deg)`;
+            img.style.transform = `rotate(${angle}deg) translate(${circle.clientWidth / 1.5}px) rotate(-45deg)`;
             circle.appendChild(img);
         }
     </script>
