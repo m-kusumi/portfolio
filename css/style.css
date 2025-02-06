@@ -253,7 +253,7 @@ li {
   position: absolute;
   /* overflow: hidden; はみ出したスライドを隠す */
   z-index: 2;
-  top: 34%;
+  top: 40%;
 }
 /*  ↓ スライド（コンテンツ） */
 .slide { /*スライド全体 */
@@ -290,7 +290,7 @@ li {
   background-color: #FCE8F0;
 }
 .slide img{
-  width: 80%;
+  max-width: 1300px;
   height: auto;
 }
 
@@ -334,7 +334,7 @@ li {
   bottom: 20px;
   display: flex;
   column-gap: 18px;
-  z-index: 10;
+  z-index: -1;
   justify-content: center;
   align-items: center;
 }
