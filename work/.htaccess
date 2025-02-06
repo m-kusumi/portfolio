@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Secret Area"
-AuthUserFile mayo-kusumi.com/.htpassword
+AuthUserFile home/mayo-kusumi.com/.htpassword
 Require user valid-user
