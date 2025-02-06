@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Secret Area"
-AuthUserFile work/.htpassword
+AuthUserFile index/.htpassword
 Require user valid-user
