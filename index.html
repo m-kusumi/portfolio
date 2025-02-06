@@ -20,21 +20,42 @@
 
 <body>
   <div class="wrapper">
-    <!-- header -->
     <header class="header">
-          <a href="index.html">MAYO KUSUMI</a>
+      <a href="index.html">MAYO KUSUMI</a>
     </header>
     <nav class="gnav">
       <ul class="gnav-list">
-        <!-- <li class="gnav-item"><a href="index.html">トップ</a></li> -->
-          <a class="gnav-item" href="work/works.html"><li>WORK</li></a>
-          <a class="gnav-item" href="nikki.html"><li>NIKKI</li></a>
+        <a class="gnav-item" href="work/works.html"><li>WORK</li></a>
+        <a class="gnav-item" href="nikki.html"><li>NIKKI</li></a>
         <a class="gnav-item" href="play.html"><li >PLAY</li></a>
       </ul>
     </nav>
-    <!-- /header -->
-
   </div>
+    <!-- スライドの外枠 -->
+  <div class="slide-wrapper">
+    <!-- スライド（コンテンツ） -->
+    <div id="slide" class="slide">
+      <div>
+        <img src="img/kiso.png">
+      </div>
+      <div>
+        <img src="img/method/method-1.png">
+      </div>
+      <div>
+        <img src="img/sakebikun/sakebikun-chap1.png">
+      </div>
+    </div>
+    <!-- 左右のボタン -->
+    <span id="prev" class="prev"></span>
+    <span id="next" class="next"></span>
+    <!-- インジケーター -->
+    <!-- <ul class="indicator" id="indicator">
+      <li class="list"></li>
+      <li class="list"></li>
+      <li class="list"></li>
+    </ul> -->
+  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type='text/javascript' src="js/script.js"></script>
 

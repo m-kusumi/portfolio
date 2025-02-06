@@ -34,22 +34,6 @@
 <body>
 
 </div>
-<div id="circle"></div>
-
-    <script>
-        const numImages = 8;
-        const circle = document.getElementById('circle');
-        const imgSrc = '/img/kiso.png';
-
-        for (let i = 0; i < numImages; i++) {
-            const angle = (360 / numImages) * i;
-            const img = document.createElement('img');
-            img.src = imgSrc;
-            img.className = 'image';
-            img.style.transform = `rotate(${angle}deg) translate(${circle.clientWidth / 1.5}px) rotate(-45deg)`;
-            circle.appendChild(img);
-        }
-    </script>
   <script type='text/javascript' src="js/script.js"></script>
 </body>
 </html>

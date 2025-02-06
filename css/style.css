@@ -35,6 +35,13 @@ img {
   padding: 0;
 }
 
+.wrapper {
+  position: absolute;
+  width: 100%;
+}
+
+
+
 /*--------------------------------
  見出し
 ---------------------------------*/
@@ -76,7 +83,7 @@ img {
   width: 100%;
   height: 100vh;
   font-family: Futura PT,"Yu Gothic Medium",YuGothic,"Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: 100;
   letter-spacing: 0.2em;
   line-height: 1.7em;
@@ -90,45 +97,11 @@ a.gnav-item:hover {
   background: #ff3186;
 }
 
-/*--------------------------------
- index
----------------------------------*/
 
-.works-item:nth-of-type(3n) {
-  margin-right: 0;
-}
-
-/*--------------------------------
- About
----------------------------------*/
-.profile {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 50px 20px 50px 20px;
-}
-
-
-.profile-body p {
-  font-size: 25px;
-  line-height: 1.9;
-}
-
-/* .profile-body p:not(:last-child) {
-  margin-bottom: 30px;
-} */
 
 /*--------------------------------
  ページトップ
 ---------------------------------*/
-.page-top {
-  font-weight: bold;
-  padding: 10px;
-  cursor: pointer;
-  text-align: center;
-  background-color: #4c4c4c;
-}
 
 .page-top .material-icons-outlined {
   vertical-align: bottom;
@@ -261,6 +234,121 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/*--------------------------------
+ スライド
+---------------------------------*/
+/* *,body,ul {
+  margin: 0;
+  padding: 0;
+} */
+/* li {
+  list-style: none;
+} */
+/* ↓ スライドの外枠 */
+.slide-wrapper {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  /* overflow: hidden; はみ出したスライドを隠す */
+  z-index: 2;
+  top: 34%;
+}
+/*  ↓ スライド（コンテンツ） */
+.slide { /*スライド全体 */
+  width: 300%;
+  height: 100%;
+  display: flex;
+  transition: all 1s;
+}
+.slide div { /* スライド */
+  width: 33.33%;
+  height: 100%;
+  font-size: 16px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.slide1 { /* スライドさせるために必要なクラス */
+  transform: translateX(0);
+}
+.slide2 { /* スライドさせるために必要なクラス */
+  transform: translateX(-33.33%);
+}
+.slide3 { /* スライドさせるために必要なクラス */
+  transform: translateX(-66.66%);
+}
+.slide div:nth-of-type(1){ /* 背景色 */
+  background-color: #FCE8F0;
+}
+.slide div:nth-of-type(2){ /* 背景色 */
+  background-color: #FCE8F0;
+}
+.slide div:nth-of-type(3){ /* 背景色 */
+  background-color: #FCE8F0;
+}
+.slide img{
+  width: 80%;
+  height: auto;
+}
+
+/* ↓ 左右のボタン */
+.next {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 10px;
+  bottom: 50%;
+  z-index: 10;
+  cursor: pointer;
+  border-top: solid 3px #000;
+  border-right: solid 3px #000;
+  -webkit-transform: rotate(45deg) translateY(50%);
+  transform: rotate(45deg) translateY(50%);
+  /* transition: .1s; */
+}
+/* .next:hover {
+  width: 40px;
+  height: 40px;
+} */
+
+.prev {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 25px;
+  bottom: 50%;
+  z-index: 10;
+  cursor: pointer;
+  border-top: solid 3px #000;
+  border-right: solid 3px #000;
+  -webkit-transform: rotate(-135deg) translateY(-50%);
+  transform: rotate(-135deg) translateY(-50%);
+}
+/* ↓ インジケーター */
+.indicator {
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  column-gap: 18px;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
+.indicator li {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  list-style: none;
+  background-color: #fff;
+  border: 2px #000 solid;
+  cursor: pointer;
+}
+.indicator li:first-of-type {
+  background-color: #000;
 }
 
 
