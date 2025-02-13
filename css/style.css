@@ -6,6 +6,16 @@ body {
   overflow: hidden;
 }
 
+h1{
+  display: block;
+}
+
+p{
+  font-size: 18px;;
+  background: #FCE8F0;
+  margin-bottom: 10px;
+}
+
 a {
   color: #333;
   transition: opacity .3s;
@@ -40,6 +50,14 @@ img {
   position: absolute;
   width: 100%;
 }
+
+.bg-about{
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  top: 40%;
+}
+
 
 
 
@@ -221,6 +239,10 @@ li {
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.slide div div{
+  display: block;
 }
 .slide1 { /* スライドさせるために必要なクラス */
   transform: translateX(0);
@@ -424,6 +446,5 @@ li {
     line-height: 1.7;
     margin-bottom: 20px;
   }
-
 
 }
