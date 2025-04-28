@@ -71,3 +71,5 @@ indicator.addEventListener('click', (event) => {
   }
 });
 // startAutoPlay();
+
+
