@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta property='og:type' content='website'>
-  <meta property='og:title' content='MAYO KUSUMI Web site'>
-  <meta property='og:url' content='https://www.mayo-kusumi.com/'>
-  <meta property='og:description' content='MAYO KUSUMI Web site'>
-  <meta name="description" content="MAYO KUSUMI Web site" />
-  <title>MAYO KUSUMI Web site</title>
+  <meta property='og:title' content='WebデザイナーMAYO KUSUMI ポートフォリオ'>
+  <meta property='og:url' content='URLが入る'>
+  <meta property='og:description' content='MAYO KUSUMIのポートフォリオサイトです。'>
+  <meta property="og:image" content="img/ogp.png">
+  <meta name="description" content="MAYO KUSUMIのポートフォリオサイトです" />
+  <title>MAYO KUSUMI ポートフォリオ</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
@@ -18,51 +19,114 @@
   <link rel=”canonical” href=”URLが入る” />
 </head>
 
-<body class="anim-box fadein is-animated">
+<body>
   <div class="wrapper">
-    <header class="header">
-      <a href="index.html">MAYO KUSUMI</a>
+
+    <!-- header -->
+    <header class="header ">
+      <div class="container">
+        <h1 class="header-logo">
+          <a href=".">(MAYO KUSUMI)</a>
+        </h1>
+        <nav class="gnav">
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href="#works">(WORKS)</a></li>
+            <li class="gnav-item"><a href="#about">(ABOUT)</a></li>
+            <li class="gnav-item"><a href="#contact">(CONTACT)</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <nav class="gnav">
-      <ul class="gnav-list">
-        <a class="gnav-item" href="work.html"><li>WORK</li></a>
-        <a class="gnav-item" href="about.html"><li>ABOUT</li></a>
-        <a class="gnav-item" href="play.html"><li >PLAY</li></a>
-      </ul>
-    </nav>
+    <!-- /header -->
+
+    <main class="content">
+
+      <!-- mv -->
+      <!-- <div class="mv">
+        <div class="mv-container">
+          <p class="mv-title">mayo-kusumi</p>
+        </div>
+      </div> -->
+      <!-- /mv -->
+
+      <!-- works -->
+      <section class="works section" id="works">
+        <div class="container">
+          <div class="works-list">
+            <a class="works-item" href="works-template.html">
+              <div class="works-img"><img src="img/works-sample-thumb.jpg" alt="" /></div>
+              <p class="works-name">作品名が入る</p>
+              <p class="works-info">Design / Coding(Responsive)</p>
+            </a>
+            <a class="works-item" href="works-template.html">
+              <div class="works-img"><img src="img/works-dummy-thumb.jpg" alt="" /></div>
+              <p class="works-name">作品名が入る</p>
+              <p class="works-info">Design / Coding(Responsive) / WordPress</p>
+            </a>
+            <a class="works-item" href="works-template.html">
+              <div class="works-img"><img src="img/works-dummy-thumb.jpg" alt="" /></div>
+              <p class="works-name">作品名が入る</p>
+              <p class="works-info">Design</p>
+            </a>
+            <a class="works-item" href="works-template.html">
+              <div class="works-img"><img src="img/works-dummy-thumb.jpg" alt="" /></div>
+              <p class="works-name">作品名が入る</p>
+              <p class="works-info">Banner Design</p>
+            </a>
+            <a class="works-item" href="works-template.html">
+              <div class="works-img"><img src="img/works-dummy-thumb.jpg" alt="" /></div>
+              <p class="works-name">作品名が入る</p>
+              <p class="works-info">Banner Design</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- /works -->
+
+      <!-- about -->
+      <section class="about section" id="about">
+        <div class="container">
+          <h2 class="title">ABOUT</h2>
+          <div class="profile">
+            <div class="profile-body">
+              <p>こんにちは。楠見真世と言います。</p>
+              <p>1995年、和歌山県生まれ。長岡造形大学の視覚デザイン学科を卒業後、</p>
+              <p>Web制作会社でWebデザイナーを経験し、現在はフロントエンドエンジニアを目指しています。</p>
+              <p>遊び心を持ちながら、仕事に向き合い、「世界の端っこで面白いものを作る」をテーマにものづくりに携わっていきたいと考えています。</p>
+              <p>毎日の、なんでもない瞬間に楽しいが生まれてくるようなものを届けていきたいです。</p>
+              <p>このサイトのテーマは「アイデアと実験と遊び」をテーマに作りました。技術が足りない部分もありますが、技術だけでなくちょっとしたアイデアで世の中を変える</p>          
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /about -->
+
+      <!-- contact -->
+      <section class="contact section" id="contact">
+        <div class="container">
+          <h2 class="title">CONTACT</h2>
+          <p class="lead">
+            お問い合わせは、<br class="sp-only">メールにてお願いいたします。
+          </p>
+          <div class="contact-list">
+           <span class="contact-item">t22dunk[at]gmail.com</span>
+          </div>
+        </div>
+      </section>
+      <!-- /contact -->
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">&copy;MAYO KUSUMI</div>
+    </footer>
+    <!-- /footer -->
+
   </div>
-    <!-- スライドの外枠 -->
-  <div class="slide-wrapper">
-    <!-- スライド（コンテンツ） -->
-    <div id="slide" class="slide">
-      <div>
-        <img src="img/kiso.png">
-      </div>
-      <div>
-        <img src="img/method/method-1.png">
-      </div>
-      <div>
-        <img src="img/sakebikun/sakebikun-chap1.png">
-      </div>
-      <div>
-        <img src="img/ganshinkei.jpg">
-      </div>
-    </div>
-    <!-- 左右のボタン -->
-    <span id="prev" class="prev"></span>
-    <span id="next" class="next"></span>
-    <!-- インジケーター -->
-    <ul class="indicator" id="indicator">
-      <li class="list"></li>
-      <li class="list"></li>
-      <li class="list"></li>
-      <li class="list"></li>
-    </ul>
-  </div>
-  
-  <a href="contact.html"><img class="img-contact" src="img/icon_contact.png"></a>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type='text/javascript' src="js/script.js"></script>
-
 </body>
 </html>
