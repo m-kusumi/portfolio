@@ -37,10 +37,7 @@ img {
 
 .section {
   padding: 90px 0;
-}
-
-.section:nth-of-type(odd) {
-  background-color: #f7f7f7;
+  border-top: solid 1px #ffd0b6;
 }
 
 .container {
@@ -232,7 +229,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   max-width: 800px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .profile-img {
   width: 20%;
@@ -258,17 +255,8 @@ img {
 /*--------------------------------
  Contact
 ---------------------------------*/
-.contact {
-  text-align: center;
-}
 
-.contact-item:not(:last-child) {
-  margin-right: 10px;
-}
 
-.contact-text {
-  margin-top: 10px;
-}
 /*--------------------------------
  ページトップ
 ---------------------------------*/
@@ -278,6 +266,7 @@ img {
   cursor: pointer;
   text-align: center;
   background-color: #4c4c4c;
+  width: 80px;
 }
 
 .page-top .material-icons-outlined {
@@ -289,14 +278,13 @@ img {
  フッター
 ---------------------------------*/
 .footer {
-  padding: 30px;
-  background-color: #333;
+  padding: 20px;
 }
 
 .copyright {
-  font-size: 10px;
-  text-align: center;
-  color: #797979;
+  font-size: 14px;
+  text-align: right;
+  color: #6d7cea;
 }
 
 /*--------------------------------
@@ -486,12 +474,7 @@ img {
   .profile {
     display: block;
   }
-  .profile-img {
-    width: 150px;
-    margin: 0 auto;
-    margin-bottom: 25px;
-  }
-
+  
   .profile-body p {
     font-size: 14px;
     line-height: 1.7;

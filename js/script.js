@@ -17,4 +17,27 @@ $(function () {
     return false;
   });
 
+  
+});
+
+const variations = [
+  "(MAYO KUSUMI)",
+  "!MAYO KUSUMI!",
+  "?MAYO KUSUMI?",
+  "&MAYO KUSUMI&",
+  "#MAYO KUSUMI#"
+];
+
+let current = -1;
+
+$(window).on('scroll', function () {
+  const scroll = $(window).scrollTop();
+  const index = Math.floor(scroll / 10) % variations.length;
+
+  if (index !== current) {
+    current = index;
+    $('#name').fadeOut(0, function () {
+      $(this).text(variations[index]).fadeIn(0);
+    });
+  }
 });
