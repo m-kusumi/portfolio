@@ -1,14 +1,22 @@
 body {
+  background-color: #f9f9f9;
+  background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
+                    linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
+  background-size: 20px 20px;
+  background-repeat: repeat;
+  background-position: left top;
   font-family: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
   font-size: 15px;
   letter-spacing: .05em;
   color: #333;
+  
 }
+
 
 a {
   transition: opacity .3s;
   text-decoration: none;
-  color: #1ca9e3;
+  color: #ff8846;
 }
 
 img {
@@ -177,7 +185,8 @@ img {
 }
 
 .works-img img {
-  border: 1px solid #e6e6e6;
+  border: 1px solid #a8c7ff;
+  border-radius: 10px;
 }
 
 .works-name {
