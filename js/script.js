@@ -41,3 +41,16 @@ $(window).on('scroll', function () {
     });
   }
 });
+
+$('a[href^="#"]').on('click', function (e) {
+  e.preventDefault();
+
+  const target = $($(this).attr('href'));
+  const offset = $('.header').outerHeight() || 0;
+
+  if (target.length) {
+    $('html, body').stop().animate({
+      scrollTop: target.offset().top - offset
+    }, 900, 'easeInOutCubic'); 
+  }
+});
