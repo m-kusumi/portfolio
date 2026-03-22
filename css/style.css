@@ -5,11 +5,11 @@ body {
   background-size: 20px 20px;
   background-repeat: repeat;
   background-position: left top;
-  font-family: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-family: "Inter", "Noto Sans JP","Helvetica Neue","Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,Arial,sans-serif;
   font-size: 15px;
   letter-spacing: .05em;
   color: #333;
-  
+
 }
 
 
@@ -58,12 +58,13 @@ img {
  見出し
 ---------------------------------*/
 .title {
-  font-size: 45px;
+  font-size: 50px;
+  font-weight: 100;
   line-height: 1;
   margin-bottom: 40px;
   padding-top: 60px;
   text-align: left;
-  letter-spacing: .05em;
+  letter-spacing: .5em;
   color: #000000;
   border-top: solid 1px #ff8846;
 }
@@ -92,7 +93,8 @@ img {
 }
 
 .header-logo {
-  font-size: 30px;
+  font-size: 25px;
+  font-weight: 100;
   line-height: 1.2;
   margin-right: 20px;
   letter-spacing: .05em;
@@ -260,7 +262,7 @@ img {
 }
 
 .profile-body p {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.8;
 }
 
@@ -277,7 +279,6 @@ img {
  ページトップ
 ---------------------------------*/
 .page-top {
-  font-weight: bold;
   padding: 10px;
   cursor: pointer;
   text-align: center;
@@ -391,7 +392,7 @@ img {
   }
 
   .section {
-    padding: 60px 0;
+    padding: 35px 0;
   }
 
   .container {
