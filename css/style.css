@@ -1,5 +1,5 @@
 body {
-  background-color: #f9f9f9;
+  background-color: #e2e2e2;
   background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
                     linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
   background-size: 20px 20px;
@@ -44,7 +44,7 @@ img {
 }
 
 .section {
-  padding: 90px 0;
+  padding: 60px 0;
   /* border-top: solid 1px #ff8846; */
 }
 
@@ -58,7 +58,7 @@ img {
  見出し
 ---------------------------------*/
 .title {
-  font-size: 34px;
+  font-size: 45px;
   line-height: 1;
   margin-bottom: 40px;
   padding-top: 60px;
@@ -177,7 +177,8 @@ img {
 }
 
 .works-item:hover {
-  opacity: .9;
+  background-color: rgb(147, 171, 255);
+  opacity: .8;
 }
 
 .works-item:nth-of-type(3n) {
@@ -185,7 +186,7 @@ img {
 }
 
 .works-img img {
-  border: 1px solid #a8c7ff;
+  border: 1px solid #ff99d3;
   border-radius: 10px;
 }
 
