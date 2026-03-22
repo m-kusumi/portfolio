@@ -54,3 +54,10 @@ $('a[href^="#"]').on('click', function (e) {
     }, 900, 'easeInOutCubic'); 
   }
 });
+
+$(function () {
+  $('#header').load('header.html');
+  $('#footer').load('footer.html');
+  $('#works').load('works.html');
+  $('#about').load('about.html');
+});
