@@ -139,38 +139,6 @@ img {
   border-bottom: solid 1px #00c311;
 }
 
-/*--------------------------------
- メインビジュアル
----------------------------------*/
-.mv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 85vh;
-  text-align: center;
-}
-
-.mv-container {
-  padding: 0 40px;
-}
-
-.mv-title {
-  font-size: 60px;
-  line-height: 1.2;
-  margin-bottom: 5px;
-  letter-spacing: .1em;
-}
-.mv-subtitle {
-  font-size: 20px;
-  line-height: 1;
-  margin-bottom: 40px;
-  letter-spacing: .08em;
-}
-
-.mv-text {
-  font-size: 16px;
-  line-height: 1.8;
-}
 
 /*--------------------------------
  Works
@@ -361,57 +329,54 @@ img {
   height: 100%;
 }
 
-.article {
-  padding: 80px 0;
+/* レイアウト */
+.work-detail {
+  display: flex;
+  gap: 80px;
+  margin-top: 80px;
+  align-items: flex-start;
 }
 
-.article-container {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* 左（画像） */
+.work-visual {
+  flex: 1;
 }
 
-.article-title {
-  margin-bottom: 30px;
-  text-align: left;
+.work-visual img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
 }
 
-.article-body {
-  max-width: 720px;
-  margin: 0 auto;
-  margin-bottom: 80px;
+/* スマホ画像 */
+.work-visual .sp-img {
+  width: 50%;
+  margin-top: 24px;
+  margin-left: auto;
 }
 
-.article-body h3 {
-  position: relative;
-  font-size: 18px;
-  margin-bottom: 5px;
-  padding-left: 1em;
+/* 右（テキスト） */
+.work-text {
+  flex: 1;
 }
 
-.article-body h3:not(:first-child) {
-  margin-top: 50px;
+.work-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
-.article-body h3::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  content: "";
-  border-radius: 3px;
+.work-lead {
+  margin-bottom: 16px;
 }
 
-.article-body p {
-  font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 30px;
+.work-text p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 12px;
 }
 
-.home-link {
-  text-align: center;
-}
 
 /*media Queries 767
 ----------------------------------------------------*/
@@ -480,28 +445,6 @@ img {
     display: none;
   }
 
-  /*  メインビジュアル */
-  .mv {
-    height: 75vh;
-  }
-
-  .mv-container {
-    padding: 0 20px;
-  }
-
-  .mv-title {
-    font-size: 30px;
-  }
-  .mv-subtitle {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  .mv-text {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
   /* Works */
   .works-name {
     font-size: 12px;
@@ -521,6 +464,15 @@ img {
     margin-bottom: 30px;
   }
 
+  .work-detail {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .sp-img {
+    width: 80%;
+  }
+
   /* About */
   .profile {
     display: block;
@@ -535,30 +487,8 @@ img {
     margin-bottom: 20px;
   }
 
-  
-
   /* フッター */
   .footer {
     padding: 20px;
-  }
-
-  /* 下層ページ */
-  .article {
-    padding: 50px 0;
-  }
-
-  .article-body h3 {
-    font-size: 16px;
-    padding-left: .8em;
-  }
-
-  .article-body h3:not(:first-child) {
-    margin-top: 30px;
-  }
-
-  .article-body p {
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 20px;
   }
 }
