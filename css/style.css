@@ -263,7 +263,7 @@ img {
 .tag-b {
   color: #555;
   font-size: 14px;
-  margin: 8px 0px;
+  margin: 8px 0 8px 8px;
   padding: 3px 6px;
   display: inline-block;
   border: 1px solid #ff8846;
@@ -343,9 +343,9 @@ img {
 }
 
 .work-title {
-  font-size:  24px;
+  font-size:  30px;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 3.5rem;
 }
 
 .work-lead {
@@ -370,6 +370,14 @@ padding-top: 2rem;
   width: 100%;
   margin-top: 40px;
   border-radius: 6px;
+}
+
+.work-visual .title-s{
+  color: #898989;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: solid 1px #bcbcbc;
 }
 
 /* PC画像 */
