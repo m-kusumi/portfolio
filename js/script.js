@@ -61,3 +61,16 @@ $(function () {
   $('#works').load('works.html');
   $('#about').load('about.html');
 });
+
+// ランダムに背景の色が変化
+// const colors = [
+//   "#fdf6f0", // ほんのりベージュ
+//   "#f0f8ff", // 薄いブルー
+//   "#fff0f5", // 薄いピンク
+//   "#f5f5f5", // グレー
+//   "#f0fff4"  // 薄いグリーン
+// ];
+
+// const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+// document.body.style.backgroundColor = randomColor;
