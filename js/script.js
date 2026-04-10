@@ -20,28 +20,32 @@ $(function () {
   
 });
 
-const variations = [
-  "(MAYO KUSUMI)",
-  "!MAYO KUSUMI!",
-  "?MAYO KUSUMI?",
-  "&MAYO KUSUMI&",
-  "#MAYO KUSUMI#"
-];
 
-let current = -1;
+// 左上の名前が変化する
+// const variations = [
+//   "(MAYO KUSUMI)",
+//   "!MAYO KUSUMI!",
+//   "?MAYO KUSUMI?",
+//   "&MAYO KUSUMI&",
+//   "#MAYO KUSUMI#"
+// ];
 
-$(window).on('scroll', function () {
-  const scroll = $(window).scrollTop();
-  const index = Math.floor(scroll / 10) % variations.length;
+// let current = -1;
 
-  if (index !== current) {
-    current = index;
-    $('#name').fadeOut(0, function () {
-      $(this).text(variations[index]).fadeIn(0);
-    });
-  }
-});
+// $(window).on('scroll', function () {
+//   const scroll = $(window).scrollTop();
+//   const index = Math.floor(scroll / 10) % variations.length;
 
+//   if (index !== current) {
+//     current = index;
+//     $('#name').fadeOut(0, function () {
+//       $(this).text(variations[index]).fadeIn(0);
+//     });
+//   }
+// });
+
+
+// アンカーリンク
 $('a[href^="#"]').on('click', function (e) {
   e.preventDefault();
 
@@ -60,6 +64,7 @@ $(function () {
   $('#footer').load('footer.html');
   $('#works').load('works.html');
   $('#about').load('about.html');
+  $('#contact').load('contact.html');
 });
 
 // ランダムに背景の色が変化
